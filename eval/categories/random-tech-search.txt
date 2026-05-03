@@ -1,0 +1,14 @@
+# Real-world top-10 organic for a tech-flavored query.
+# Captured 2026-05-02. Query: "how to set up nginx reverse proxy".
+# Diverse blogs, official docs, tutorials.
+#
+https://nginx.org/en/docs/beginners_guide.html
+https://www.digitalocean.com/community/tutorials/how-to-configure-nginx-as-a-reverse-proxy-on-ubuntu-22-04
+https://www.linode.com/docs/guides/nginx-reverse-proxy/
+https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/
+https://www.cloudflare.com/learning/cdn/glossary/reverse-proxy/
+https://www.f5.com/glossary/reverse-proxy
+https://kinsta.com/blog/reverse-proxy/
+https://www.hostinger.com/tutorials/nginx-reverse-proxy/
+https://blog.bytebytego.com/p/ep18-reverse-proxy-vs-api-gateway
+https://docs.cpanel.net/knowledge-base/web-services/how-to-configure-nginx-as-a-reverse-proxy/

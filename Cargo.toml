@@ -1,0 +1,43 @@
+[package]
+name = "br"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4", features = ["derive", "env"] }
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+serde_urlencoded = "0.7"
+anyhow = "1"
+thiserror = "1"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+rusqlite = { version = "0.32", features = ["bundled"] }
+r2d2 = "0.8"
+r2d2_sqlite = "0.25"
+ulid = "1"
+directories = "5"
+nix = { version = "0.29", features = ["process", "signal"] }
+reqwest = { version = "0.12", default-features = false, features = ["rustls-tls", "gzip", "brotli", "http2", "charset", "cookies"] }
+rquest = { version = "5.1", features = ["cookies"] }
+bytes = "1"
+encoding_rs = "0.8"
+libc = "0.2"
+pdf-extract = "0.10"
+url = { version = "2", features = ["serde"] }
+readability = "0.3"
+htmd = "0.2"
+async-trait = "0.1"
+base64 = "0.22"
+html-escape = "0.2"
+fff-search = "0.6.5-nightly.e00b41d"
+gpui = "0.2"
+rquest-util = "2.2.1"
+rmcp = { version = "1.6.0", features = ["server", "transport-io", "macros"] }
+schemars = "1.2.1"
+wry = { version = "0.55.0", default-features = false, features = ["protocol"] }
+tao = "0.35.0"
+
+[profile.release]
+opt-level = 3

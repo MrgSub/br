@@ -1,0 +1,10 @@
+# Pages built by known doc generators. Tier 1.6 (Reader endpoints) gives
+# us cheaper, lossless extraction here. Today most fall to parse_html.
+https://docs.docusaurus.io/                          # Docusaurus
+https://nuxt.com/docs/getting-started/installation   # Mintlify-ish
+https://docs.anthropic.com/en/docs/welcome           # Mintlify
+https://docs.stripe.com/api                          # custom
+https://www.gitbook.com/                             # GitBook self
+https://substack.com/                                # Substack root
+https://www.lennysnewsletter.com/p/the-anti-ai-essay # Substack post (custom domain)
+https://medium.com/p/4-rules-for-fast-flexible-and-furious-data-pipelines-d72d8f4c19f4

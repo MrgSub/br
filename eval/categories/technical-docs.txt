@@ -1,0 +1,14 @@
+# Technical reference docs — the bread-and-butter agent fetch.
+# Targets a mix of generators (AWS = custom, Stripe = Mintlify-ish,
+# MDN = MDN, Postgres = MkDocs-ish, K8s = Hugo/Docusaurus,
+# Anthropic = Mintlify) so we exercise the full reader-endpoint
+# discovery space in tier 1.6 once that lands.
+#
+https://docs.aws.amazon.com/lambda/latest/dg/welcome.html
+https://docs.stripe.com/api/charges
+https://developer.mozilla.org/en-US/docs/Web/API/fetch
+https://www.postgresql.org/docs/current/sql-select.html
+https://kubernetes.io/docs/concepts/workloads/pods/
+https://docs.anthropic.com/en/docs/welcome
+https://docs.djangoproject.com/en/5.0/topics/db/queries/
+https://nodejs.org/api/fs.html

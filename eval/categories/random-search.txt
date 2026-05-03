@@ -1,0 +1,14 @@
+# Real-world end-to-end test: top-10 organic results for
+# query "specialty coffee in lisbon" via DuckDuckGo HTML, captured
+# 2026-05-01. Goal: 100% pass rate on a generic blog-style query.
+#
+https://themediterraneaninsider.com/eat-drink/top-brews-the-best-specialty-coffee-shops-in-lisbon/
+https://wheatlesswanderlust.com/best-coffee-shops-lisbon/
+https://hellokristof.com/best-specialty-coffee-in-lisbon/
+https://www.localspecialtycoffee.com/cities/best-coffee-in-lisbon
+https://thealgarveexperience.com/best-cafes-in-lisbon/
+https://europeancoffeetrip.com/lisbon/
+https://www.theslowtravelista.com/portugal/2024/04/speciality-coffee-in-lisbon/
+https://roadbook.com/lisbon/city-guide/best-coffee-shops-lisbon/
+https://www.coffeeinsurrection.com/lisbon.html
+https://peaberrynotes.com/coffee/lisbon-specialty-coffee

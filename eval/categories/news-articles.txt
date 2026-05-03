@@ -1,0 +1,14 @@
+# Major news articles: variety of CMSes, paywalls, ad-tech.
+# Tests parse_html on real journalism (the most common agent fetch).
+# Targets a mix of soft-paywall (Guardian, BBC), hard-paywall (NYT,
+# WSJ — those should surface as paywall stubs cleanly), and free
+# (Reuters, AP, NPR).
+#
+https://www.bbc.com/news/world-us-canada-68829411
+https://www.theguardian.com/technology/2024/oct/08/llm-context-windows
+https://www.reuters.com/technology/artificial-intelligence/
+https://apnews.com/hub/artificial-intelligence
+https://www.npr.org/sections/technology/
+https://techcrunch.com/category/artificial-intelligence/
+https://arstechnica.com/
+https://www.theverge.com/

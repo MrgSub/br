@@ -1,0 +1,14 @@
+# Real articles that *should* always extract cleanly. Regression sentinel:
+# if any of these stops passing, we broke something.
+#
+# Note: `example.com` (184 chars trimmed) intentionally NOT in this list —
+# it's a real corner case where `looks_like_stub` returns false-negative on
+# legitimate-but-tiny content. Tracking it would make the harness flap.
+https://en.wikipedia.org/wiki/Rust_(programming_language)
+https://en.wikipedia.org/wiki/Lambda_calculus
+https://blog.cloudflare.com/markdown-for-agents/
+https://news.ycombinator.com/
+https://docs.rs/serde/latest/serde/
+https://www.rust-lang.org/learn
+https://doc.rust-lang.org/book/
+https://docs.python.org/3/tutorial/introduction.html

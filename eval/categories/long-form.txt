@@ -1,0 +1,16 @@
+# Pages that bust naive context budgets. Exercises --max-tokens
+# truncation: every fetch in this category is run with
+# `--max-tokens 4000` (16 KB cap) to confirm we get useful output.
+#
+# The harness doesn't currently drive --max-tokens per-URL, so for now
+# we just track raw byte counts to monitor the Phase-6 / extraction
+# pipeline on big inputs. If --max-tokens becomes a per-category
+# setting we can fold it in.
+#
+https://en.wikipedia.org/wiki/World_War_II
+https://en.wikipedia.org/wiki/Quantum_mechanics
+https://www.rfc-editor.org/rfc/rfc9110.html
+https://lwn.net/Articles/975185/
+https://blog.cloudflare.com/cloudflare-radar-2024-year-in-review/
+https://github.com/microsoft/vscode/blob/main/README.md
+https://docs.kernel.org/admin-guide/index.html

@@ -1,0 +1,15 @@
+# SPAs whose initial HTML is a shell. Cheap tiers return a stub;
+# Phase 6 escalates to headless.
+#
+# Mix of: small-business SPAs that hydrate fine (tomsushi), JS-heavy
+# marketing pages (Linear, Vercel), product-page SPAs (Figma file
+# pages, Notion docs).
+#
+https://tomsushi.ca/
+https://linear.app/method
+https://vercel.com/blog
+https://supabase.com/docs/guides/database/overview
+https://airtable.com/templates
+https://www.gitbook.com/
+https://retool.com/products/state
+https://www.statuspage.io/

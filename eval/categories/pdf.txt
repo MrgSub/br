@@ -1,0 +1,6 @@
+# Direct-PDF URLs. Tier 1.3 (PdfText strategy) handles these.
+https://arxiv.org/pdf/2106.09685.pdf
+https://arxiv.org/pdf/1706.03762.pdf
+https://www.rfc-editor.org/rfc/rfc9110.pdf
+https://arxiv.org/pdf/2005.14165.pdf
+https://arxiv.org/pdf/1810.04805.pdf

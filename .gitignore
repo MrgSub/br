@@ -1,0 +1,19 @@
+# Rust build output
+/target/
+**/*.rs.bk
+
+# Local eval artifacts (each run is timestamped; runs are reproducible)
+/eval/results/
+
+# autoresearch (if used) — keep config but not noisy logs
+/autoresearch.jsonl
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor scratch
+.idea/
+.vscode/
+*.swp
+*.swo

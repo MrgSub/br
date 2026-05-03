@@ -1,0 +1,11 @@
+# Hosts known to gate via Cloudflare / Datadome / PerimeterX challenges.
+# Today our Stealth fetcher's Chrome-136 fingerprint defeats most of these,
+# but a meaningful fraction still drop us into a challenge page. Tier 1.5
+# (challenge-page detection + headless escalation) is the fix.
+https://www.g2.com/
+https://www.glassdoor.com/
+https://www.indeed.com/
+https://www.zillow.com/
+https://www.crunchbase.com/
+https://www.tripadvisor.com/
+https://www.expedia.com/

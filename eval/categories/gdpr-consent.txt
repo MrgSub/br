@@ -1,0 +1,13 @@
+# Sites that gate every fetch behind a cookie/consent banner.
+# Without Phase 4 auto-consent, headless renders return the modal
+# text instead of content. Most of these are EU news / publishers
+# using OneTrust, TrustArc, or Iubenda.
+#
+https://www.spiegel.de/
+https://www.lemonde.fr/
+https://www.elpais.com/
+https://www.lefigaro.fr/
+https://www.faz.net/aktuell/
+https://www.zeit.de/
+https://www.repubblica.it/
+https://www.elmundo.es/

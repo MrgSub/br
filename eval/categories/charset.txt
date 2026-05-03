@@ -1,0 +1,12 @@
+# Non-UTF-8 / mixed-encoding pages. Today (pre-1.1) most of these either
+# fail outright in extract.rs or produce mojibake. Pass criterion is the
+# same content floor — the harness can't tell mojibake from real text, so
+# spot-check the output of each on suspicious diffs.
+https://www.asahi.com/
+https://www.yomiuri.co.jp/
+https://www.aozora.gr.jp/cards/000035/files/1567_14913.html
+https://www.baidu.com/
+https://www.people.com.cn/
+https://www.naver.com/
+https://lenta.ru/
+https://www.idnes.cz/

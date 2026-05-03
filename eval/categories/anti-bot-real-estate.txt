@@ -1,0 +1,15 @@
+# Phase 6 stress test: anti-bot real-estate hosts that hang or 403
+# the cheap chain. The waterfall's empty-trigger should escalate to
+# headless and recover what content it can.
+#
+# Query: best apartments san francisco (top-10 DDG organic)
+https://www.apartmentlist.com/ca/san-francisco
+https://www.apartments.com/san-francisco-ca/
+https://www.yelp.com/search?cflt=apartments&find_loc=San+Francisco
+https://www.forrent.com/trending/ca/san-francisco/apartments
+https://www.rentcafe.com/apartments-for-rent/san-francisco-ca/
+https://www.zumper.com/apartments-for-rent/san-francisco-ca
+https://www.realtor.com/apartments/San-Francisco_CA
+https://www.apartmentfinder.com/California/San-Francisco-Apartment
+https://www.apartmenthomeliving.com/san-francisco-ca
+https://www.apartmentratings.com/ca/san-francisco/

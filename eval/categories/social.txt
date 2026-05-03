@@ -1,0 +1,10 @@
+# Social / Q&A / video hosts. Generic chain produces noise; site adapters
+# (tiers 2.2 YouTube, 2.3 StackExchange, 2.4 X, 2.5 Mastodon) are the fix.
+https://www.youtube.com/watch?v=dQw4w9WgXcQ
+https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-locally-and-remotely
+https://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do-in-python
+https://x.com/karpathy/status/1854063264374030472
+https://twitter.com/karpathy/status/1854063264374030472
+https://mastodon.social/@Mastodon/111971648397354197
+https://news.ycombinator.com/item?id=42130881
+https://www.reddit.com/r/rust/comments/1g8z4x9/
