@@ -48,11 +48,35 @@ Coverage: **102/113 (90.3 %)** across 14 eval categories. See
 [`docs/coverage-report.md`](docs/coverage-report.md) for what's left
 on the table.
 
-## Install
+## Quickstart
 
-macOS only for now (depends on WKWebView / `objc2-app-kit` / `gpui`).
-Adding Linux is ~2–3 days, not currently a goal — see
+macOS arm64 only for now (depends on WKWebView / `objc2-app-kit` /
+`gpui`). Linux port is ~2–3 days, not on the roadmap — see
 [`docs/next-steps.md`](docs/next-steps.md) caveat #9.
+
+### Option A: download the released binary
+
+```sh
+curl -L -o br https://github.com/MrgSub/br/releases/download/v0.1.0/br-v0.1.0-aarch64-apple-darwin
+chmod +x br
+./br fetch https://en.wikipedia.org/wiki/Rust_(programming_language)
+```
+
+Verify the checksum (optional, but the binary is unsigned so macOS
+will ask):
+
+```sh
+curl -sL https://github.com/MrgSub/br/releases/download/v0.1.0/br-v0.1.0-aarch64-apple-darwin.sha256 | shasum -a 256 -c
+# br-v0.1.0-aarch64-apple-darwin: OK
+```
+
+If macOS Gatekeeper blocks it on first launch:
+
+```sh
+xattr -d com.apple.quarantine ./br
+```
+
+### Option B: build from source
 
 ```sh
 git clone https://github.com/MrgSub/br
@@ -62,6 +86,22 @@ ln -s "$PWD/target/release/br" /usr/local/bin/br
 ```
 
 Cold release build is ~90 s; incremental rebuilds are <5 s.
+
+### First fetch
+
+```sh
+br fetch https://example.com/
+# Example Domain ... documentation ... ICANN
+
+br fetch https://www.apartments.com/san-francisco-ca/
+# WAF-walled → automatic headless escalation → real listings
+
+br fetch https://arxiv.org/pdf/1706.03762.pdf --max-tokens 8000
+# PDF text extraction, capped at ~32 KB with a truncation marker
+```
+
+The daemon auto-spawns on first command (~600 ms cold start). Run
+`br daemon status` to confirm it's up; `br daemon stop` to shut down.
 
 ## Usage
 
