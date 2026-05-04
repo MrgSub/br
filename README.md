@@ -54,26 +54,28 @@ macOS arm64 only for now (depends on WKWebView / `objc2-app-kit` /
 `gpui`). Linux port is ~2–3 days, not on the roadmap — see
 [`docs/next-steps.md`](docs/next-steps.md) caveat #9.
 
-### Option A: download the released binary
+### Option A: one-liner installer
 
 ```sh
-curl -L -o br https://github.com/MrgSub/br/releases/download/v0.1.0/br-v0.1.0-aarch64-apple-darwin
-chmod +x br
-./br fetch https://en.wikipedia.org/wiki/Rust_(programming_language)
+curl -fsSL https://raw.githubusercontent.com/MrgSub/br/main/install.sh | bash
 ```
 
-Verify the checksum (optional, but the binary is unsigned so macOS
-will ask):
+Resolves the latest release, downloads the macOS arm64 binary,
+verifies the SHA-256 checksum, strips the Gatekeeper quarantine
+attribute, and installs to `~/.local/bin/br`. Prints a PATH hint if
+`~/.local/bin` isn't on yours.
+
+Knobs (env vars):
 
 ```sh
-curl -sL https://github.com/MrgSub/br/releases/download/v0.1.0/br-v0.1.0-aarch64-apple-darwin.sha256 | shasum -a 256 -c
-# br-v0.1.0-aarch64-apple-darwin: OK
-```
+# pin a specific release
+curl -fsSL .../install.sh | BR_VERSION=v0.1.0 bash
 
-If macOS Gatekeeper blocks it on first launch:
+# install elsewhere
+curl -fsSL .../install.sh | BR_INSTALL_DIR=/usr/local/bin bash
 
-```sh
-xattr -d com.apple.quarantine ./br
+# skip the PATH suggestion
+curl -fsSL .../install.sh | BR_NO_MODIFY_PATH=1 bash
 ```
 
 ### Option B: build from source
