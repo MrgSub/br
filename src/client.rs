@@ -54,6 +54,9 @@ pub async fn round_trip_or_spawn(req: Frame) -> Result<Frame> {
     }
 }
 
+/// Round-trip without autospawning. For commands where "daemon not
+/// running" is itself the answer the user wants (`ping`, `status`,
+/// `daemon stop`).
 async fn round_trip(req: Frame) -> Result<Frame> {
     let mut stream = connect().await?;
     write_frame(&mut stream, &req).await?;
@@ -97,7 +100,10 @@ pub async fn fetch(
     format: crate::OutputFormat,
 ) -> Result<()> {
     let req = Frame::Fetch(FetchReq { url, agent, options });
-    match round_trip(req).await? {
+    // Autospawn: the daemon is an implementation detail to a user just
+    // running `br fetch <url>`; they shouldn't have to remember to
+    // start it first.
+    match round_trip_or_spawn(req).await? {
         Frame::FetchOk(r) => {
             // JSON mode short-circuits the markdown-with-meta path: the
             // envelope already contains everything --meta would print.
@@ -126,7 +132,7 @@ pub async fn fetch(
 }
 
 pub async fn search(req: crate::search::SearchReq, json: bool) -> Result<()> {
-    match round_trip(Frame::Search(req)).await? {
+    match round_trip_or_spawn(Frame::Search(req)).await? {
         Frame::SearchOk(r) => {
             if json {
                 println!("{}", serde_json::to_string_pretty(&r)?);
@@ -158,7 +164,7 @@ pub async fn search(req: crate::search::SearchReq, json: bool) -> Result<()> {
 }
 
 pub async fn tab_read(req: crate::search::TabReadReq, json: bool) -> Result<()> {
-    match round_trip(Frame::TabRead(req)).await? {
+    match round_trip_or_spawn(Frame::TabRead(req)).await? {
         Frame::TabReadOk(r) => {
             if json {
                 println!("{}", serde_json::to_string_pretty(&r)?);
@@ -186,7 +192,7 @@ pub async fn tab_read(req: crate::search::TabReadReq, json: bool) -> Result<()> 
 }
 
 pub async fn cache_stats(json: bool) -> Result<()> {
-    match round_trip(Frame::CacheStats).await? {
+    match round_trip_or_spawn(Frame::CacheStats).await? {
         Frame::CacheStatsResp(s) => {
             if json {
                 println!("{}", serde_json::to_string_pretty(&s)?);
@@ -211,7 +217,7 @@ pub async fn cache_stats(json: bool) -> Result<()> {
 }
 
 pub async fn cache_clear(all: bool, json: bool) -> Result<()> {
-    match round_trip(Frame::CacheClear { also_drop_tabs: all }).await? {
+    match round_trip_or_spawn(Frame::CacheClear { also_drop_tabs: all }).await? {
         Frame::CacheClearResp(r) => {
             if json {
                 println!("{}", serde_json::to_string_pretty(&r)?);
@@ -229,7 +235,7 @@ pub async fn cache_clear(all: bool, json: bool) -> Result<()> {
 }
 
 pub async fn cache_get(url: String, json: bool) -> Result<()> {
-    match round_trip(Frame::CacheGet { url }).await? {
+    match round_trip_or_spawn(Frame::CacheGet { url }).await? {
         Frame::CacheGetResp { hit } => {
             if json {
                 println!("{}", serde_json::to_string_pretty(&hit)?);
